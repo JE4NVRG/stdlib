@@ -57,6 +57,7 @@ $(stdlib_custom_eslint_rules_plugin_out)/index.js: $(NODE_MODULES) $(stdlib_cust
 	$(BROWSERIFY) $(stdlib_custom_eslint_rules_plugin_entry) \
 		--node \
 		--ignore-missing \
+		--external eslint \
 		--outfile $@ \
 		--standalone $(stdlib_custom_eslint_rules_plugin_name)
 
